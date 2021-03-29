@@ -4,7 +4,7 @@ defmodule HashGenerator.MixProject do
   def project do
     [
       app: :hash_generator,
-      version: "1.0.0",
+      version: "1.0.1",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -17,7 +17,9 @@ defmodule HashGenerator.MixProject do
     [
       name: "hash_generator",
       licenses: ["MIT"],
-      links: []
+      links: %{
+        "GitHub": "https://github.com/dodiameer/hash_generator"
+      }
     ]
   end
 
@@ -33,6 +35,7 @@ defmodule HashGenerator.MixProject do
     [
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
